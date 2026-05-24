@@ -16,10 +16,10 @@ public class teleOP_handoff extends OpMode {
 
     @Override
     public void init() {
-        frontRight = hardwareMap.get(DcMotor.class, "frontRight");
-        frontLeft = hardwareMap.get(DcMotor.class, "frontLeft");
-        backRight = hardwareMap.get(DcMotor.class, "backRight");
-        backLeft = hardwareMap.get(DcMotor.class, "backLeft");
+        frontRight = hardwareMap.get(DcMotor.class, "frontRight"); // Moves front right motor
+        frontLeft = hardwareMap.get(DcMotor.class, "frontLeft"); // moves front left motor
+        backRight = hardwareMap.get(DcMotor.class, "backRight"); // moves back right motor
+        backLeft = hardwareMap.get(DcMotor.class, "backLeft"); // moves back left motor
 
         frontRight.setDirection(DcMotorSimple.Direction.REVERSE);
         backRight.setDirection(DcMotorSimple.Direction.REVERSE);
