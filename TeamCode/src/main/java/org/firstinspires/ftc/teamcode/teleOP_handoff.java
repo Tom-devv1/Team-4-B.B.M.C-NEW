@@ -5,6 +5,7 @@ import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.DcMotorSimple;
 import com.qualcomm.robotcore.hardware.Gamepad;
+// ARVIN YOU BETTER MAKE THE INTAKE CODE AND THE SHOOTER CODE OR I WILL FIND WHERE YOU LIVE
 
 @TeleOp(name="Basic: Iterative OpMode", group="Iterative OpMode")
 public class teleOP_handoff extends OpMode {
