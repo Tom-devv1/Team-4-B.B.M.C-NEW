@@ -1,0 +1,99 @@
+
+____________________________________________________
+____________________________________________________
+This is a file with EXPERIMENTAL code made by gemini
+____________________________________________________
+
+*please check that you have the right code loaded*
+
+1: shooter- intake and shooter code
+2: Tellyop_auto- auto code for bot for 10pts
+3: tellyop_handoff- hand off code to switch between driver and shooter. Includes driving code
+
+*INSTRUCTIONS BELOW*
+
+_____________________________________________________
+
+*SHOOTER INSTRUCTIONS*
+
+OPERATOR CONTROLS (Non-Driver Gamepad)
+
+Right Trigger : Spin shooter flywheel (0% to 100% based on squeeze)
+
+Y Button      : Spin shooter at 100% MAX power
+
+Right Bumper  : Run intake forward (pull in / feed element)
+
+Left Bumper   : Run intake backward (outtake / clear jam)
+
+HOW TO SHOOT IN A MATCH
+
+Step 1: Press and hold Right Trigger (or Y Button) to spin up flywheel.
+Step 2: Wait 1 to 2 seconds for the wheel to reach full speed.
+Step 3: Press and hold Right Bumper to feed element into the flywheel.
+Step 4: Release all buttons when done.
+
+____________________________________________________________________
+
+*TELLYOP_AUTO INSTRUCTIONS*
+
+WHAT THE ROBOT DOES IN AUTONOMOUS
+
+Step 1: Drives FORWARD for 1.0 second.
+Step 2: Turns LEFT for 1.0 second.
+Step 3: STOPS all drive motors.
+Step 4: Starts SHOOTER flywheel at 100% power and waits 1.5 seconds to spin up.
+Step 5: Runs INTAKE forward for 1.0 second to feed element into shooter.
+Step 6: STOPS all shooter and intake motors.
+
+MATCH START PROCEDURE
+
+Step 1: On Driver Station app, select "Basic Telly Auto" from Autonomous side.
+Step 2: Load game element into the intake/feeder mechanism.
+Step 3: Press INIT on Driver Station phone.
+Step 4: Align robot on field starting position.
+Step 5: When match begins, press START (Play button). Hands off controllers!
+
+________________________________________________________________________
+
+*TELLYOP_HANDOFF INSTRUCTIONS*
+
+CONTROLLER ROLE BREAKDOWN
+
+Active Driver  : Controls drivetrain (strafing, moving, turning).
+
+Operator       : Controls shooter and intake mechanism.
+
+Whoever is NOT driving automatically becomes the Operator!
+
+DRIVER CONTROLS (Active Driver)
+
+Left Stick Y  : Drive Forward / Backward
+
+Left Stick X  : Strafe Left / Right
+
+Right Stick X : Turn Left / Right
+
+Button A      : Claim driver control (transfer driving to your controller)
+
+OPERATOR CONTROLS (Non-Driver)
+
+Right Bumper  : Spin intake IN (pull element in)
+
+Left Bumper   : Spin intake OUT (reverse / eject element)
+
+Right Trigger : Spin shooter flywheel (0% to 100% variable speed)
+
+Y Button      : Spin shooter flywheel at 100% MAX power
+
+HOW HANDOFF WORKS IN A MATCH
+
+Start of match : Gamepad 1 is default Driver; Gamepad 2 is default Operator.
+
+Swapping roles : Press Button A on either controller to take over driving.
+
+Rumble feedback: Controller taking over driving will rumble for 0.5s.
+Controller losing driver control will rumble 2 quick blips.
+
+_________________________________________________________________________
+_________________________________________________________________________
