@@ -8,7 +8,7 @@ public class Shooter {
 
     public void init(HardwareMap hardwareMap) {
         shooterMotor = hardwareMap.get(DcMotor.class, "shooterMotor");
-        shooterMotor.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.COAST);
+        shooterMotor.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.FLOAT);
     }
 
     public void run(double triggerPower, boolean fullPowerOverride) {
