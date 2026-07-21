@@ -28,23 +28,41 @@ public class tellyop_auto extends LinearOpMode {
 
         shooter.init(hardwareMap);
 
+        telemetry.addData("Status", "Initialized");
+        telemetry.update();
+
         waitForStart();
 
-        forward();
-        sleep(1000);
+        if (opModeIsActive()) {
+            telemetry.addData("Status", "Running Auto");
+            telemetry.update();
+            
+            forward();
+            sleep(1000);
 
-        turnLeft();
-        sleep(1000);
+            turnLeft();
+            sleep(1000);
 
-        stopRobot();
+            stopRobot();
 
-        shooter.run(1.0, true);
-        sleep(1500);
+            // Spin up shooter
+            telemetry.addData("Status", "Spinning up shooter");
+            telemetry.update();
+            shooter.run(0, true);
+            sleep(1500);
 
-        intakeMotor.setPower(0.85);
-        sleep(1000);
-
-        stopMechanisms();
+            // Feed to shooter
+            if (opModeIsActive()) {
+                telemetry.addData("Status", "Feeding intake");
+                telemetry.update();
+                intakeMotor.setPower(0.85);
+                sleep(1000);
+            }
+            
+            stopMechanisms();
+            telemetry.addData("Status", "Done");
+            telemetry.update();
+        }
     }
 
     public void stopRobot() {

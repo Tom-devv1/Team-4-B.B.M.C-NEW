@@ -37,19 +37,19 @@ public class tellyOP_handoff extends OpMode {
     public void loop() {
 
         if(gamepad1.a && !previousA1) {
-            if (isGamepad1Driving) {
-                gamepad2.rumbleBlips(2);
+            if (!isGamepad1Driving) {
                 gamepad1.rumble(500);
+                gamepad2.rumbleBlips(2);
+                isGamepad1Driving = true;
             }
-            isGamepad1Driving = true;
         }
 
         if(gamepad2.a && !previousA2) {
             if (isGamepad1Driving) {
-                gamepad2.rumbleBlips(2);
-                gamepad1.rumble(500);
+                gamepad2.rumble(500);
+                gamepad1.rumbleBlips(2);
+                isGamepad1Driving = false;
             }
-            isGamepad1Driving = false;
         }
 
         previousA1 = gamepad1.a;
@@ -82,5 +82,10 @@ public class tellyOP_handoff extends OpMode {
         }
 
         shooter.run(operatorGamepad.right_trigger, operatorGamepad.y);
+
+        telemetry.addData("Driver", isGamepad1Driving ? "Gamepad 1" : "Gamepad 2");
+        telemetry.addData("Operator", isGamepad1Driving ? "Gamepad 2" : "Gamepad 1");
+        telemetry.addData("Shooter Power", shooter.getPower());
+        telemetry.update();
     }
 }
