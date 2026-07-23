@@ -5,6 +5,7 @@ import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.DcMotorSimple;
 import com.qualcomm.robotcore.hardware.Gamepad;
+import org.firstinspires.ftc.teamcode.Shooter
 
 @TeleOp(name="Basic: Handoff TellyOp", group="Iterative OpMode")
 public class tellyOP_handoff extends OpMode {
@@ -53,7 +54,7 @@ public class tellyOP_handoff extends OpMode {
         }
 
         previousA1 = gamepad1.a;
-        previousA2 = gamepad2.a;
+        previousA2 = gamepad2.b;
 
         Gamepad activeGamepad = isGamepad1Driving ? gamepad1 : gamepad2;
         Gamepad operatorGamepad = isGamepad1Driving ? gamepad2 : gamepad1;
